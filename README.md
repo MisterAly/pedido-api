@@ -38,7 +38,7 @@ O projeto inclui um CRUD completo para a entidade `Pedido`, que possui uma rela√
 
 ## Tecnologias utilizadas
 
-- .NET 5
+- .NET 8
 - Entity Framework Core
 - SQL Server
 - Docker
