@@ -1,0 +1,14 @@
+#Docker compose file with SQL Server
+version: '3.8'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SQLServerPassword1234
+    ports:
+      - 1433:1433
+    volumes:
+      - ./db-data:/var/opt/mssql/data
