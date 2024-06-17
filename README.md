@@ -10,6 +10,12 @@ O projeto segue os princípios de design de software SOLID para garantir que o c
 
 O projeto utiliza SQL Server como sistema de gerenciamento de banco de dados. O servidor de banco de dados é hospedado em um container Docker para facilitar a configuração e o isolamento do ambiente.
 
+## Pré-requisitos
+
+Para rodar este projeto, você precisa ter o seguinte software instalado em seu computador:
+
+- Docker: O projeto utiliza containers Docker para hospedar o servidor de banco de dados SQL Server. Certifique-se de que o Docker esteja instalado e funcionando corretamente em seu sistema antes de tentar rodar o projeto.
+
 ## Como rodar o projeto
 
 1. Inicie o ambiente Docker com o comando:
@@ -42,7 +48,3 @@ O projeto inclui um CRUD completo para a entidade `Pedido`, que possui uma rela�
 - Entity Framework Core
 - SQL Server
 - Docker
-
-## Contribuição
-
-Contribuições são bem-vindas. Para contribuir, por favor, faça um fork do projeto, crie uma branch com suas alterações e abra um pull request.
