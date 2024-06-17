@@ -1,18 +1,48 @@
-Esse projeto tem o propósito simples de funcionar como um CRUD para Pedidos.
+# Projeto de Gerenciamento de Pedidos
 
-Desta forma criei uma simples arquitetura com separação de responsabilidades para facilitar uma hipotética manutenção do código.
+Este projeto é uma aplicação ASP.NET Core que fornece uma interface de API REST para criar, ler, atualizar e deletar (CRUD) pedidos.
 
-Utilizei um SQL Server para o projeto criado em Docker para hospedar os dados.
-Para erguer o ambiente docker apenas rode o comando:
+## Arquitetura
 
+O projeto segue os princípios de design de software SOLID para garantir que o código seja fácil de manter e estender. Ele é estruturado em camadas para separar as responsabilidades, tornando o código mais limpo e mais fácil de entender.
+
+## Banco de Dados
+
+O projeto utiliza SQL Server como sistema de gerenciamento de banco de dados. O servidor de banco de dados é hospedado em um container Docker para facilitar a configuração e o isolamento do ambiente.
+
+## Como rodar o projeto
+
+1. Inicie o ambiente Docker com o comando:
+
+```bash
 $ docker-compose up -d
+```
 
-Migrations iniciais estão criadas no projeto com o propósito de criar as tabelas iniciais, basta rodar:
+2. Execute as migrations para criar as tabelas iniciais:
 
+```bash
 $ dotnet ef database update --context PedidoContext
+```
 
-Com esses passos você pode apenas rodar:
+3. Inicie a aplicação:
 
+```bash
 $ dotnet run
+```
 
-Sua aplicação deve estar rodando na porta [5209](http://localhost:5209/api/') e aceitando requisições da porta 3000.
+Após seguir esses passos, a aplicação deve estar rodando na porta 5209 e aceitando requisições da porta 3000. Você pode acessar a aplicação em [http://localhost:5209/api/](http://localhost:5209/api/).
+
+## Recursos
+
+O projeto inclui um CRUD completo para a entidade `Pedido`, que possui uma relação de um para muitos com a entidade `ItemPedido`. Cada `Pedido` pode ter vários `ItemPedido`, mas cada `ItemPedido` pertence a apenas um `Pedido`.
+
+## Tecnologias utilizadas
+
+- .NET 5
+- Entity Framework Core
+- SQL Server
+- Docker
+
+## Contribuição
+
+Contribuições são bem-vindas. Para contribuir, por favor, faça um fork do projeto, crie uma branch com suas alterações e abra um pull request.

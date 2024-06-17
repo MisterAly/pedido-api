@@ -138,3 +138,4 @@
 /Users/alysonwee/Projects/PedidoAPI/obj/Debug/net8.0/PedidoAPI.pdb
 /Users/alysonwee/Projects/PedidoAPI/obj/Debug/net8.0/PedidoAPI.genruntimeconfig.cache
 /Users/alysonwee/Projects/PedidoAPI/obj/Debug/net8.0/ref/PedidoAPI.dll
+/Users/alysonwee/Projects/PedidoAPI/obj/Debug/net8.0/PedidoAPI.sourcelink.json
